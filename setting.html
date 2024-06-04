@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--Header-->
+    <div class="header">
+        <div class="page">
+            <header class="header-profil">
+                <div class="profil profil-page">
+
+                    <img class="back-btn" src="img/back-btn.png" alt="" onclick="location.href='javascript:history.back()'">
+
+                    <h1 class="redak-page-title">Настройки</h1>
+
+                </div><!--./Profil-->
+
+            </header>
+        </div><!--./Page-->
+    </div><!--/.Header-->
+
+    <main class="profil-main">
+        <div class="page">
+
+            <div class="anon-pl setting-pl">
+
+                <h1 class="pl-title">Анонимный режим</h1>
+
+                <p class="pl-text">Включив эту настроки ты будешь под ником анонимный</p>
+
+                <button class="anon-vkl" id="anon-vkl"></button>
+                <script>
+                    const myButton = document.getElementById('anon-vkl');
+
+                    myButton.addEventListener('click', function() {
+                    if (this.classList.contains('activ')) {
+                        this.classList.remove('activ');
+                    } else {
+                        this.classList.add('activ');
+                    }
+                    });
+                </script>
+            </div>
+            <div class="lsdan setting-pl" onclick="location.href='lsdan.html'">
+
+                <h1 class="pl-title">Личные данные</h1>
+
+                <p class="pl-text">Никнейм, город и прочее</p>
+
+            </div>
+            <div class="raport setting-pl">
+
+                <h1 class="pl-title">Связь с разработчиками</h1>
+
+                <p class="pl-text">Пишите по любому вопросу</p>
+
+            </div>
+
+        </div><!--./Page-->
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>

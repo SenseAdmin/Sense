@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--Header-->
+    <div class="header">
+        <div class="page">
+            <header class="header-profil">
+                <div class="profil profil-page">
+
+                    <img class="back-btn" src="img/back-btn.png" alt="" onclick="location.href='javascript:history.back()'">
+
+                    <h1 class="redak-page-title">Редактирование</h1>
+
+                </div><!--./Profil-->
+
+            </header>
+        </div><!--./Page-->
+    </div><!--/.Header-->
+
+    <main class="profil-main">
+        <div class="page">
+
+            <div class="osebe">
+                <h1 class="osebe-title">О себе</h1>
+
+                <p class="osebe-subtitle">Напишите рассказ о себе, чем вы занимаетесь</p>
+
+                <form method="post" action="/">
+                    <textarea class="osebe-input" placeholder="Напишите что-нибудь" required oninput="autoResize(this)"></textarea>
+
+                    <script>
+                        function autoResize(textarea) {
+                          textarea.style.height = 'auto';
+                          textarea.style.height = textarea.scrollHeight + 'px';
+                        }
+                    </script>
+
+                    <input class="save-redak" type="submit" value="Сохранить">
+                </form>
+            </div>
+
+            <div class="intresting profil-intresting">
+                <h2>Интересы</h2>
+
+                <h1>Выберети интересы,чтобы найти людей с похожими увлечениями</h1>
+
+                <form method="post" action="/">
+                    <input class="intrest-change" type="button" value="Добавить интересы" onclick="location.href='intrestings.html'">
+                </form>
+
+            </div><!--./Intresting-->
+
+        </div><!--./Page-->
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>

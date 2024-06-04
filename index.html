@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--Header-->
+    <div class="header">
+        <div class="page">
+            <header>
+                <div class="profil">
+
+                    <h1>Лента друзей</h1>
+
+                </div><!--./Profil-->
+
+            </header>
+        </div><!--./Page-->
+    </div><!--/.Header-->
+
+    <!--Lenta-->
+    <main class="lenta">
+        <div class="page">
+            <div class="anket">
+                <div class="profil-anket">
+
+                    <img class="profil-icon" src="img/profil-anket.png" alt="">
+
+                    <div class="nickname">
+                        <h1 id="nickname">Антон, 18 лет</h1>
+                        <p>г. Йошкар-ола, Россия</p>
+                    </div>
+
+                    <button class="like-btn"  onclick="changeColor(this)" id="like-btn"></button>
+                    <script>
+                       function changeColor(button) {
+                            if (button.classList.contains('clicked')) {
+                                button.classList.remove('clicked');
+                            } else {
+                                button.classList.add('clicked');
+                            }
+                            }
+                    </script>
+
+                    <div class="like-modal" id="like-modal">
+                        <h1>Скоро Антон тебе ответит!</h1>
+                    </div>
+
+                    <button class="more" id="more">
+                        <img class="more-img" src="img/more.png" alt="">
+                    </button>
+                </div>
+
+                <div class="text">
+                    <p>Хааай, ищу друзей по интересам, увлекаюсь музыкой, играю на гитаре, хочу создать музыкальную группу</p>
+                </div>
+
+                <div class="intresting">
+                    <h1>Интересы</h1>
+                    <div class="intrest-pl">
+                        <div class="plashka">
+                            <p href>Рок</p>
+                        </div>
+                        <div class="plashka">
+                            <p href>Музыка</p>
+                        </div>
+                        <div class="plashka">
+                            <p href>Общение</p>
+                        </div>
+                        <div class="plashka">
+                            <p href>Танцы</p>
+                        </div>
+                        <div class="plashka">
+                            <p href>Общение</p>
+                        </div>
+                        <div class="plashka">
+                            <p href>Танцы</p>
+                        </div>
+                        <div class="plashka">
+                            <p href>Рок</p>
+                        </div>
+                        <div class="plashka">
+                            <p href>Музыка</p>
+                        </div>
+                    </div>
+                </div><!--./Intresting-->
+
+                <div class="anket-form">
+                    <form>
+                        <input class="anket-input" type="text" required placeholder="Напишите что-нибудь" id="anket-input">
+                        <input class="anket-submit" type="submit" value="">
+                    </form>
+                </div>
+            </div><!--./Anket-->
+
+            <div class="anket">
+                <div class="profil-anket">
+
+                    <img class="profil-icon" src="img/profil-anket1.png" alt="">
+
+                    <div class="nickname">
+                        <h1>Ася, 18 лет</h1>
+                        <p>г. Йошкар-ола, Россия</p>
+                    </div>
+
+                    <button class="like-btn"  onclick="changeColor(this)" id="like-btn"></button>
+                    <script>
+                       function changeColor(button) {
+                            if (button.classList.contains('clicked')) {
+                                button.classList.remove('clicked');
+                            } else {
+                                button.classList.add('clicked');
+                            }
+                            }
+                    </script>
+
+                    <button class="more" id="more">
+                        <img class="more-img" src="img/more.png" alt="">
+                    </button>
+
+                </div>
+
+                <div class="text">
+                    <p>Хааай, ищу друзей по интересам, увлекаюсь музыкой, играю на гитаре, хочу создать музыкальную группу. Хааай, ищу друзей по интересам, увлекаюсь музыкой, играю на гитаре, хочу создать музыкальную группу.Хааай, ищу друзей по интересам, увлекаюсь музыкой, играю на гитаре, хочу создать музыкальную группуХааай, ищу друзей по интересам, увлекаюсь музыкой, играю на гитаре, хочу создать музыкальную группуХааай, ищу друзей по интересам, увлекаюсь музыкой, играю на гитаре, хочу создать музыкальную группу</p>
+                </div>
+
+                <div class="intresting">
+                    <h1>Интересы</h1>
+                    <div class="intrest-pl">
+                        <div class="plashka">
+                            <p href>Рок</p>
+                        </div>
+                        <div class="plashka">
+                            <p href>Музыка</p>
+                        </div>
+                        <div class="plashka">
+                            <p href>Общение</p>
+                        </div>
+                        <div class="plashka">
+                            <p href>Танцы</p>
+                        </div>
+                    </div>
+                </div><!--./Intresting-->
+                <div class="anket-form">
+                    <form>
+                        <input class="anket-input" type="text" required placeholder="Напишите что-нибудь">
+                        <input class="anket-submit" type="submit" value="">
+                    </form>
+                </div>
+            </div><!--./Anket-->
+
+            <div class="anket">
+                <div class="profil-anket">
+
+                    <img class="profil-icon" src="img/profil-anket2.png" alt="">
+
+                    <div class="nickname">
+                        <h1>Андрей, 18 лет</h1>
+                        <p>г. Йошкар-ола, Россия</p>
+                    </div>
+
+                    <button class="like-btn"  onclick="changeColor(this)" id="like-btn"></button>
+                    <script>
+                       function changeColor(button) {
+                            if (button.classList.contains('clicked')) {
+                                button.classList.remove('clicked');
+                            } else {
+                                button.classList.add('clicked');
+                            }
+                            }
+                    </script>
+
+                    <button class="more" id="more">
+                        <img class="more-img" src="img/more.png" alt="">
+                    </button>
+
+
+                </div>
+
+                <div class="text">
+                    <p>Хааай, ищу друзей по интересам, увлекаюсь музыкой, играю на гитаре</p>
+                </div>
+
+                <div class="intresting">
+                    <h1>Интересы</h1>
+                    <div class="intrest-pl">
+                        <div class="plashka">
+                            <p href>Рок</p>
+                        </div>
+                        <div class="plashka">
+                            <p href>Музыка</p>
+                        </div>
+                        <div class="plashka">
+                            <p href>Общение</p>
+                        </div>
+                        <div class="plashka">
+                            <p href>Танцы</p>
+                        </div>
+                    </div>
+                </div><!--./Intresting-->
+                <div class="anket-form">
+                    <form>
+                        <input class="anket-input" type="text" required placeholder="Напишите что-нибудь">
+                        <input class="anket-submit" type="submit" value="">
+                    </form>
+                </div>
+            </div><!--./Anket-->
+
+            <div class="anket">
+                <div class="profil-anket">
+
+                    <img class="profil-icon" src="img/profil-anket3.png" alt="">
+
+                    <div class="nickname">
+                        <h1>Ким, 18 лет</h1>
+                        <p>г. Йошкар-ола, Россия</p>
+                    </div>
+
+                    <button class="like-btn"  onclick="changeColor(this)" id="like-btn"></button>
+                    <script>
+                       function changeColor(button) {
+                            if (button.classList.contains('clicked')) {
+                                button.classList.remove('clicked');
+                            } else {
+                                button.classList.add('clicked');
+                            }
+                            }
+                    </script>
+
+                    <button class="more" id="more">
+                        <img class="more-img" src="img/more.png" alt="">
+                    </button>
+
+
+                </div>
+
+                <div class="text">
+                    <p>Хааай, ищу друзей по интересам, увлекаюсь музыкой, играю на гитаре.Хааай, ищу друзей по интересам, увлекаюсь музыкой, играю на гитареХааай, ищу друзей по интересам, увлекаюсь музыкой, играю на гитаре</p>
+                </div>
+
+                <div class="intresting">
+                    <h1>Интересы</h1>
+                    <div class="intrest-pl">
+                        <div class="plashka">
+                            <p href>Рок</p>
+                        </div>
+                        <div class="plashka">
+                            <p href>Музыка</p>
+                        </div>
+                        <div class="plashka">
+                            <p href>Общение</p>
+                        </div>
+                        <div class="plashka">
+                            <p href>Танцы</p>
+                        </div>
+                    </div>
+                </div><!--./Intresting-->
+                <div class="anket-form">
+                    <form>
+                        <input class="anket-input" type="text" required placeholder="Напишите что-нибудь">
+                        <input class="anket-submit" type="submit" value="">
+                    </form>
+                </div>
+            </div><!--./Anket-->
+
+            <div class="anket">
+                <div class="profil-anket">
+
+                    <img class="profil-icon" src="img/profil-anket4.png" alt="">
+
+                    <div class="nickname">
+                        <h1 id="nickname">Лина, 18 лет</h1>
+                        <p>г. Йошкар-ола, Россия</p>
+                    </div>
+
+                    <button class="like-btn"  onclick="changeColor(this)" id="like-btn"></button>
+                    <script>
+                       function changeColor(button) {
+                            if (button.classList.contains('clicked')) {
+                                button.classList.remove('clicked');
+                            } else {
+                                button.classList.add('clicked');
+                            }
+                            }
+                    </script>
+
+                    <button class="more" id="more">
+                        <img class="more-img" src="img/more.png" alt="">
+                    </button>
+
+
+                </div>
+
+                <div class="text">
+                    <p>Хааай, ищу друзей</p>
+                </div>
+
+                <div class="intresting">
+                    <h1>Интересы</h1>
+                    <div class="intrest-pl">
+                        <div class="plashka">
+                            <p href>Рок</p>
+                        </div>
+                        <div class="plashka">
+                            <p href>Музыка</p>
+                        </div>
+                        <div class="plashka">
+                            <p href>Общение</p>
+                        </div>
+                        <div class="plashka">
+                            <p href>Танцы</p>
+                        </div>
+                    </div>
+                </div><!--./Intresting-->
+                <div class="anket-form">
+                    <form>
+                        <input class="anket-input" type="text" required placeholder="Напишите что-нибудь">
+                        <input class="anket-submit" type="submit" value="">
+                    </form>
+                </div>
+            </div><!--./Anket-->
+        </div><!--./Page-->
+    </main><!--./Lenta-->
+
+    <!--Navigation-->
+    <nav class="nav">
+        <div class="nav-btn">
+            <buttom class="osn-nav-btn">
+                <img class="osn-nav-btn-img" src="img/osn-btn.png" alt="">
+            </buttom>
+
+            <button onclick="location.href='index.html'">
+                <img class="nav-btn-img" src="img/chats.png" alt="">
+            </button>
+            <button>
+                <img class="nav-btn-img left-btn-img" src="img/soob.png" alt="">
+            </button>
+            <button onclick="location.href='profil.html'">
+                <img class="nav-btn-img profil-btn-img right-btn-img" src="img/profil.png" alt="">
+            </button>
+
+    </nav>
+    <div class="more-modal" id="more-modal">
+        <div class="more-modal-content" id="close">
+            <div class="block">
+                <img src="img/block.png" alt="" id="close">
+                <h1>Заблокировать</h1>
+            </div>
+            <div class="report">
+                <img src="img/report.png" alt="">
+                <h1>Пожаловаться на анкету</h1>
+            </div>
+            <div class="close"></div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

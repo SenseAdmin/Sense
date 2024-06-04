@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--Header-->
+    <div class="header">
+        <div class="page">
+            <header class="header-profil">
+                <div class="profil profil-page">
+
+                    <img class="back-btn" src="img/back-btn.png" alt="" onclick="location.href='javascript:history.back()'">
+
+                    <h1 class="redak-page-title">Личные данные</h1>
+
+                </div><!--./Profil-->
+
+            </header>
+        </div><!--./Page-->
+    </div><!--/.Header-->
+
+    <main class="profil-main">
+        <div class="page">
+
+            <div class="lsdan-form">
+                <form>
+
+                    <label class="lsdan-label" for="lsdan-input">Твой ник</label>
+                    <input class="lsdan-input" type="text" id="lsdan-input">
+
+                    <label class="lsdan-label" for="lsdan-date">Дата рождения</label>
+                    <input class="lsdan-input" type="text" id="lsdan-date">
+
+                    <h1 class="lsdan-label">Ваш пол</h1>
+
+                    <div class="radio-cont">
+                        <input class="lsdan-radio" type="radio" id="lsdan-radio" name="lsdan-radio">
+                        <label class="label-radio" for="lsdan-radio">Мужской</label>
+
+                        <input class="lsdan-radio" type="radio" id="lsdan-radio" name="lsdan-radio">
+                        <label class="label-radio" for="lsdan-radio">Женский</label>
+                    </div>
+
+                    <input class="save-redak" type="submit" value="Сохранить">
+
+                </form>
+            </div>
+
+        </div><!--./Page-->
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
