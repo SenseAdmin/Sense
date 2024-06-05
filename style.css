@@ -114,6 +114,10 @@ p, h1, h2, h3, h4, h5, h6 {
     position: absolute;
 }
 
+.profil-page img.profil-icon, img.more-img {
+    position: relative;
+}
+
 .back-btn {
     width: 30px;
     height: 30px;
@@ -245,12 +249,12 @@ p, h1, h2, h3, h4, h5, h6 {
 .nickname h1 {
     font-size: 16px;
     font-weight: 700;
+    margin-bottom: 4px;
 }
 
 .nickname p {
     font-size: 14px;
     font-weight: 300;
-    margin-top: 4px;
     opacity: .5;
 }
 
@@ -821,6 +825,7 @@ textarea:required:invalid {
 .chat {
     display: flex;
     align-items: center;
+    margin-bottom: 25px;
 
     position: relative;
 }
@@ -829,6 +834,8 @@ textarea:required:invalid {
     color: rgba( 0, 0, 0, .7);
     font-size: 15px;
     margin-left: 8px;
+    width: 100%;
+
     position: relative;
 }
 
@@ -837,12 +844,18 @@ textarea:required:invalid {
 }
 
 .checkread{
-    position: absolute;
-    bottom: -5px;
-    right: -25px;
+    margin: 6px 0 0 6px;
+    width: 17px;
+    height: 10px;
+}
 
-    width: 24px;
-    height: 24px;
+.checkread.uncheckread {
+    width: 13px;
+    height: 10px;
+    bottom: 4px;
+    right: -16px;
+
+    margin: 4px 0 0 6px;
 }
 
 .date {
@@ -854,9 +867,96 @@ textarea:required:invalid {
     right: 0;
 }
 
+.like-chat p {
+    opacity: 1;
+    font-weight: 700;
+    color: #000;
+}
+
+.uncheckread-cont img.checkread {
+    display: none;
+}
+
+.timer,
+.schit {
+    display: none;
+    position: absolute;
+    right: 26px;
+    bottom: -2px;
+
+    width: 45px;
+    height: 22px;
+    background-color: #3F20FD;
+    border-radius: 26px;
+    padding: 2px 10px;
+    color: #fff;
+    text-align: center;
+}
+
+.schit {
+    width: 22px;
+    right: 0;
+    padding: 2px 7px;
+}
+
+.uncheckread-cont .schit {
+    display: block;
+}
+
+.uncheckread-cont p {
+    opacity: 1;
+    font-weight: 700;
+    color: #000;
+}
+
+.like-chat a.timer {
+    display: block;
+}
+
+.subtitle {
+    display: flex;
+}
 
 
 
+/* chat-page
+=============================================*/
+.status p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #202DFD;
+    text-align: left;
+}
+
+.title-cont {
+    display: flex;
+    align-items: center;
+
+    margin-left: 62px;
+    width: 30px;
+}
+
+.title-cont .nick-chat {
+    width: auto;
+}
+
+.header.chat-page {
+    padding-top: 8px;
+}
+
+.header.chat-page .back-btn {
+    top: 13px;
+}
+
+.more-cont {
+    position: absolute;
+    top: 16px;
+    right: 0;
+}
+
+.more-modal-content.chat-page {
+    height: 175px;
+}
 
 
 
