@@ -844,9 +844,9 @@ textarea:required:invalid {
 }
 
 .checkread{
-    margin: 0px 0 0 6px;
-    width: 20px;
-    height: 20px;
+    margin: 6px 0 0 6px;
+    width: 17px;
+    height: 10px;
 }
 
 .checkread.uncheckread {
@@ -956,6 +956,47 @@ textarea:required:invalid {
 
 .more-modal-content.chat-page {
     height: 175px;
+}
+
+.input-cont {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: -9px;
+    width: 92%;
+    max-width: 398px;
+}
+
+.napisat-file {
+    display: none;
+}
+
+.napisat-input {
+    width: 100%;
+    max-width: 398px;
+    min-height: 60px;
+    padding: 20px 64px;
+
+    border: none;
+    border-radius: 15px;
+
+    background-color: #D9D9D9;
+}
+
+.anket-submit.napisat-submit {
+    position: absolute;
+}
+
+.for-napisat-file {
+    background: url(img/Gallery.png) center no-repeat;
+
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    position: absolute;
+    bottom: 17px;
+    right: 45px;
 }
 
 
