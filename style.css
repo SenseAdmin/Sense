@@ -877,12 +877,22 @@ textarea:required:invalid {
     display: none;
 }
 
+.timer-cont {
+    height: 22px;
+    width: 80px;
+    position: absolute;
+    right: 26px;
+    bottom: -2px;
+
+    background: linear-gradient(to left, rgba( 255, 255, 255, 1), rgba( 255, 255, 255, .9));
+}
+
 .timer,
 .schit {
     display: none;
     position: absolute;
-    right: 26px;
-    bottom: -2px;
+    right: 0px;
+    bottom: -1px;
 
     width: 45px;
     height: 22px;
@@ -895,6 +905,7 @@ textarea:required:invalid {
 
 .schit {
     width: 22px;
+    bottom: -2px;
     right: 0;
     padding: 2px 7px;
 }
