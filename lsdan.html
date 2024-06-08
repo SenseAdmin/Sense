@@ -39,14 +39,35 @@
                     <h1 class="lsdan-label">Ваш пол</h1>
 
                     <div class="radio-cont">
-                        <input class="lsdan-radio" type="radio" id="lsdan-radio" name="lsdan-radio">
+                        <input class="lsdan-radio" type="radio" id="lsdan-radio1" name="lsdan-radio">
                         <label class="label-radio" for="lsdan-radio">Мужской</label>
 
-                        <input class="lsdan-radio" type="radio" id="lsdan-radio" name="lsdan-radio">
+                        <input class="lsdan-radio" type="radio" id="lsdan-radio2" name="lsdan-radio">
                         <label class="label-radio" for="lsdan-radio">Женский</label>
                     </div>
 
-                    <input class="save-redak" type="submit" value="Сохранить">
+                    <input class="save-redak" type="submit" value="Сохранить" id="submitButton" disabled>
+
+                    <script>
+                        const input1 = document.getElementById("lsdan-input");
+                        const input2 = document.getElementById("lsdan-date");
+                        const choice1 = document.getElementById("lsdan-radio1");
+                        const choice2 = document.getElementById("lsdan-radio2");
+                        const submitButton = document.getElementById("submitButton");
+
+                        const validateForm = () => {
+                          if (input1.value && input2.value && (choice1.checked || choice2.checked)) {
+                            submitButton.removeAttribute("disabled");
+                          } else {
+                            submitButton.setAttribute("disabled", "disabled");
+                          }
+                        };
+
+                        input1.addEventListener("input", validateForm);
+                        input2.addEventListener("input", validateForm);
+                        choice1.addEventListener("change", validateForm);
+                        choice2.addEventListener("change", validateForm);
+                      </script>
 
                 </form>
             </div>
