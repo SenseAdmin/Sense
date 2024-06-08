@@ -879,12 +879,15 @@ textarea:required:invalid {
 
 .timer-cont {
     height: 22px;
-    width: 80px;
+    width: 45px;
     position: absolute;
     right: 26px;
     bottom: -2px;
-
-    background: linear-gradient(to left, rgba( 255, 255, 255, 1), rgba( 255, 255, 255, .9));
+    background: #fff3f3;
+    border-radius: 10px;
+    border: none;
+    backdrop-filter: blur(46px);
+    box-shadow: -23px 0 6px #fff3f3;
 }
 
 .timer,
