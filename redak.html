@@ -33,7 +33,7 @@
                 <p class="osebe-subtitle">Напишите рассказ о себе, чем вы занимаетесь</p>
 
                 <form method="post" action="/">
-                    <textarea class="osebe-input" placeholder="Напишите что-нибудь" required oninput="autoResize(this)"></textarea>
+                    <textarea class="osebe-input" placeholder="Напишите что-нибудь" required oninput="autoResize(this)" id="textarea"></textarea>
 
                     <script>
                         function autoResize(textarea) {
@@ -42,7 +42,19 @@
                         }
                     </script>
 
-                    <input class="save-redak" type="submit" value="Сохранить">
+                    <input class="save-redak" type="submit" value="Сохранить" disabled id="submitButton">
+
+                    <script>
+                        const inputField = document.getElementById('textarea');
+                        const submitButton = document.getElementById('submitButton');
+
+                        // Функция, которая удаляет атрибут disabled у кнопки
+                        function enableButton() {
+                        submitButton.removeAttribute('disabled');
+                        }
+
+                        inputField.addEventListener('input', enableButton);
+                    </script>
                 </form>
             </div>
 
