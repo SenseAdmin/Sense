@@ -135,7 +135,22 @@
                     <label class="intrest-label" for="intrest27">Туры</label>
                 </div>
 
-                <input class="save-redak" type="submit" value="Сохранить">
+                <input class="save-redak" type="submit" value="Сохранить" disabled id="submitButton">
+
+                <script>
+                    const submitButton = document.getElementById('submitButton');
+                    const intrestLabels = document.querySelectorAll('.intrest-label');
+
+                    // Функция, которая удаляет атрибут disabled у кнопки
+                    function enableButton() {
+                    submitButton.removeAttribute('disabled');
+                    }
+
+                    // Перебираем все label с классом intrest-label и добавляем обработчик события клика
+                    intrestLabels.forEach(label => {
+                    label.addEventListener('click', enableButton);
+                    });
+                    </script>
 
             </form>
 
