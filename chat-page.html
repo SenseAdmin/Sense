@@ -55,31 +55,40 @@
                     <input class="napisat-file" type="file" id="napisat-file">
                     <input class="anket-submit napisat-submit" type="submit" value="" id="sendMessage">
                     <script>
+                        const sendMessageBtn = document.getElementById('sendMessage');
                         const messageInput = document.getElementById('messageInput');
                         const cont = document.querySelector('.soobshenie-cont');
 
                         sendMessageBtn.addEventListener('click', function() {
-                            const messageText = messageInput.value;
+                        const messageText = messageInput.value;
 
-                            if (messageText.trim() !== '') {
-                                const newDiv = document.createElement('div');
-                                newDiv.classList.add('soobshenie');
+                        if (messageText.trim() !== '') {
+                            const newDiv = document.createElement('div');
+                            newDiv.classList.add('soobshenie');
 
-                                const newParagraph = document.createElement('p');
-                                newParagraph.textContent = messageText;
+                            const newParagraph = document.createElement('p');
+                            newParagraph.textContent = messageText;
 
-                                newDiv.appendChild(newParagraph);
-                                cont.appendChild(newDiv);
+                            newDiv.appendChild(newParagraph);
 
-                                const widthDiv = document.createElement('div');
-                                widthDiv.style.width = '100%';
-                                cont.appendChild(widthDiv);
+                            const newTime = document.createElement('h3');
+                            newTime.classList.add('time');
+                            const currentTime = new Date();
+                            newTime.textContent = `${currentTime.getHours()}:${currentTime.getMinutes()}`;
 
-                                messageInput.value = '';
-                            } else {
-                                return;
-                            }
-                        });
+                            newDiv.appendChild(newTime);
+
+                            cont.appendChild(newDiv);
+
+                            const widthDiv = document.createElement('div');
+                            widthDiv.style.width = '100%';
+                            cont.appendChild(widthDiv);
+
+                            messageInput.value = '';
+                        } else {
+                            return;
+                        }
+                    });
                     </script>
 
                 </div>
