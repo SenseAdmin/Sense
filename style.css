@@ -579,6 +579,32 @@ input:required:invalid {
     position: relative;
 }
 
+.plus-intrest {
+    width: 100px;
+    height: 33px;
+    padding: 7px 8px;
+    margin-top: 8px;
+
+    border: 1px #9399FF dashed;
+    border-radius: 10px;
+
+    position: relative;
+}
+
+.plus-intrest-title {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.plus-intrest-icon {
+    position: absolute;
+    right: 9px;
+    top: 13px;
+
+    width: 5px;
+    height: 5px;
+}
+
 
 /* Redak-page
 ==============================================*/
