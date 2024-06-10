@@ -136,7 +136,7 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-left: 8px;
 
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 500;
 }
 
 .profil-page h1 {
@@ -248,7 +248,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .nickname h1 {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 4px;
 }
 
@@ -378,22 +378,30 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* Anket-text */
 .text {
-    font-size: 16px;
+    font-size: 14px;
     color: #07080B;
     font-weight: 500;
-    margin: 16px 0;
+    margin: 16px 0 12px 0;
 }
 
 .text p {
-    font-weight: 500;
+    font-weight: 300;
 }
 
 /* Intresting */
+.cont-intrset-index.intrest-cont {
+    margin-right: 8px;
+}
+
+.cint-intrest-index.off {
+    display: none;
+}
+
 .intresting h1 {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 300;
     opacity: .5;
-    margin-bottom: 16px;
+    margin-bottom: 6px;
 }
 
 .intrest-pl {
@@ -478,7 +486,11 @@ input:required:invalid {
 
 .profil-img-osn {
     width: 153px;
-    width: 153px;
+    height: 153px;
+    border-radius: 45px;
+
+    background: url(img/alt-img.png) center no-repeat;
+    background-size: cover;
 }
 
 .plus-img {
@@ -507,7 +519,7 @@ input:required:invalid {
 
 .redak-title {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 .redak img{
@@ -548,6 +560,13 @@ input:required:invalid {
 }
 
 /* profil-intresting */
+.profil-intresting-title{
+    font-size: 14px;
+    font-weight: 300;
+    opacity: .5;
+    margin-bottom: 16px;
+}
+
 .profil-intresting {
     width: 100%;
     height: auto;
@@ -573,7 +592,6 @@ input:required:invalid {
     width: 100%;
     height: auto;
     padding: 16px;
-    margin-top: 24px;
     margin-bottom: 16px;
 
     border-radius: 15px;
@@ -589,9 +607,9 @@ input:required:invalid {
 }
 
 .osebe-subtitle {
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 16px;
     color: rgba( 0, 0, 0, .5);
 }
 
@@ -602,16 +620,14 @@ textarea:required:invalid {
 .osebe-input {
     width: 100%;
     min-height: 65px;
-    padding: 17px 15px 5px 15px;
+    padding: 12px 15px 5px 15px;
     color: #000;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 300;
     resize: none;
     overflow: hidden;
-
     border: none;
     border-radius: 10px;
-
     background-color: #fff3f3;
 }
 
@@ -682,14 +698,14 @@ textarea:required:invalid {
 }
 
 .intresting-form {
-    max-width: 300px;
+    max-width: 398px;
     padding-right: 10px;
 }
 
 .intresr-form-title {
-    font-size: 18px;
-    font-weight: 700;
-    margin: 55px 0 25px 0;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 20px 0 6px 0;
 }
 
 .intrest-cont {
@@ -699,6 +715,7 @@ textarea:required:invalid {
     width: auto;
     height: 38px;
     padding-top: 10px;
+    margin: 4px 4px 0 0;
 }
 
 .intrest {
@@ -717,7 +734,7 @@ textarea:required:invalid {
     font-size: 20px;
     color: #fff;
     right: 6px;
-    top: -5px;
+    top: -3px;
     transition: all .3s;
 }
 
@@ -725,8 +742,8 @@ textarea:required:invalid {
     border: 1px solid #202DFD;
     border-radius: 10px;
     padding: 8px 9px;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: 500;
     transition: all .3s;
 }
 
@@ -835,7 +852,7 @@ textarea:required:invalid {
 }
 
 .nick-chat {
-    color: rgba( 0, 0, 0, .7);
+    color: rgba( 0, 0, 0, 1);
     font-size: 15px;
     margin-left: 8px;
     width: 100%;
@@ -844,7 +861,7 @@ textarea:required:invalid {
 }
 
 .nick-chat h1 {
-    margin-bottom: 13px;
+    margin-bottom: 5px;
 }
 
 .checkread{
@@ -923,7 +940,7 @@ textarea:required:invalid {
 
 .uncheckread-cont p {
     opacity: 1;
-    font-weight: 700;
+    font-weight: 500;
     color: #000;
 }
 
