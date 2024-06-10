@@ -16,7 +16,9 @@
 
                     <img class="back-btn" src="img/back-btn.png" alt="" onclick="location.href='javascript:history.back()'">
 
-                    <h1 class="redak-page-title">Редактирование</h1>
+                    <h1>Профиль</h1>
+
+                    <img class="setting-btn" src="img/setting-btn.png" alt="" onclick="location.href='setting.html'">
 
                 </div><!--./Profil-->
 
@@ -24,54 +26,113 @@
         </div><!--./Page-->
     </div><!--/.Header-->
 
-    <main class="profil-main">
+    <main class="profil-main" id="profilImg">
         <div class="page">
 
-            <div class="osebe">
-                <h1 class="osebe-title">О себе</h1>
+            <div class="profil-img">
+                <div class="profil-img-osn" id="uploadedImg" src="img/alt-img.png" alt=""></div>
 
-                <p class="osebe-subtitle">Напишите рассказ о себе, чем вы занимаетесь</p>
+                <input type="file" id="fileInput" style="display: none;">
+                <img class="plus-img" src="img/plus-img.png" id="uploadBtn" alt="Upload Image" style="cursor: pointer;">
+            </div>
 
-                <form method="post" action="/">
-                    <textarea class="osebe-input" placeholder="Напишите что-нибудь" required oninput="autoResize(this)" id="textarea"></textarea>
+            <div class="redak" onclick="location.href='redak.html'">
+                <img class="pen" src="img/pen.png" alt="">
 
-                    <script>
-                        function autoResize(textarea) {
-                          textarea.style.height = 'auto';
-                          textarea.style.height = textarea.scrollHeight + 'px';
-                        }
-                    </script>
+                <h1 class="redak-title">Редактировать профиль</h1>
 
-                    <input class="save-redak" type="submit" value="Сохранить" disabled id="submitButton">
+                <img class="right" src="img/right.png" alt="">
+            </div>
 
-                    <script>
-                        const inputField = document.getElementById('textarea');
-                        const submitButton = document.getElementById('submitButton');
-
-                        // Функция, которая удаляет атрибут disabled у кнопки
-                        function enableButton() {
-                        submitButton.removeAttribute('disabled');
-                        }
-
-                        inputField.addEventListener('input', enableButton);
-                    </script>
-                </form>
+            <div class="text profil-text">
+                <h1 class="profil-text-title">О себе</h1>
+                <p>Хааай, ищу друзей по интересам, увлекаюсь музыкой, играю на гитаре, хочу создать музыкальную группу</p>
             </div>
 
             <div class="intresting profil-intresting">
-                <h4 class="osebe-title">Интересы</h4>
+                <h1>Интересы</h1>
+                <div class="cont-intrset-index">
+                    <div class="intrest-cont">
+                        <input class="intrest" type="checkbox" id="intrest1">
+                        <label class="intrest-label" for="intrest1" >Рок</label>
+                    </div>
+                    <div class="intrest-cont">
+                        <input class="intrest" type="checkbox" id="intrest2">
+                        <label class="intrest-label" for="intrest2">Игры</label>
+                    </div>
+                    <div class="intrest-cont">
+                        <input class="intrest" type="checkbox" id="intrest8">
+                        <label class="intrest-label" for="intrest8">Музыка</label>
+                    </div>
+                    <div class="intrest-cont">
+                        <input class="intrest" type="checkbox" id="intrest3">
+                        <label class="intrest-label" for="intrest3">Туры</label>
+                    </div>
+                    <div class="intrest-cont">
+                        <input class="intrest" type="checkbox" id="intrest4">
+                        <label class="intrest-label" for="intrest4">Рок</label>
+                    </div>
+                    <div class="intrest-cont">
+                        <input class="intrest" type="checkbox" id="intrest5">
+                        <label class="intrest-label" for="intrest5">Музыка</label>
+                    </div>
+                    <div class="intrest-cont">
+                        <input class="intrest" type="checkbox" id="intrest6">
+                        <label class="intrest-label" for="intrest6">Игры</label>
+                    </div>
+                    <div class="intrest-cont">
+                        <input class="intrest" type="checkbox" id="intrest7">
+                        <label class="intrest-label" for="intrest7">Туры</label>
+                    </div>
 
-                <h3 class="profil-intresting-title">Выберети интересы,чтобы найти людей с похожими увлечениями</h3>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const checkboxes = document.querySelectorAll('.intrest');
+                            checkboxes.forEach(function(checkbox) {
+                                checkbox.checked = true;
+                            });
+                        });
+                    </script>
 
-                <form method="post" action="/">
-                    <input class="intrest-change" type="button" value="Добавить интересы" onclick="location.href='intrestings.html'">
-                </form>
-
+                </div>
             </div><!--./Intresting-->
 
         </div><!--./Page-->
     </main>
 
+
+    <!--Navigation-->
+    <nav class="nav">
+        <div class="nav-btn">
+            <buttom class="osn-nav-btn">
+                <img class="osn-nav-btn-img" src="img/osn-btn.png" alt="">
+            </buttom>
+
+            <button onclick="location.href='index.html'">
+                <img class="nav-btn-img" src="img/chats.png" alt="">
+            </button>
+            <button onclick="location.href='chats.html'">
+                <img class="nav-btn-img left-btn-img" src="img/soob.png" alt="">
+            </button>
+            <button onclick="location.href='profil.html'">
+                <img class="nav-btn-img profil-btn-img right-btn-img" src="img/profil-active.png" alt="">
+            </button>
+
+    </nav>
+    
+    <div class="more-modal" id="more-modal">
+        <div class="more-modal-content" id="close">
+            <div class="block">
+                <img src="img/block.png" alt="" id="close">
+                <h1>Заблокировать</h1>
+            </div>
+            <div class="report">
+                <img src="img/report.png" alt="">
+                <h1>Пожаловаться на анкету</h1>
+            </div>
+            <div class="close"></div>
+        </div>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
