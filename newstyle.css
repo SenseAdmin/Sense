@@ -1,0 +1,395 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+
+    font-family: 'Raleway', sans-serif;
+    background-color: #15151E;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.page {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+/* Header
+==================*/
+.header {
+    margin: 0 auto;
+    padding: 35px 0 0 0;
+    width: 100%;
+    height: 80px;
+    color: #fff;
+
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+
+    background: inherit;
+}
+
+.header-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+
+/* Lenta
+====================================================*/
+.lenta-page.closed {
+    display: none;
+}
+
+.lenta {
+    margin-top: 82px;
+}
+
+.anket {
+    border-radius: 23px;
+
+    margin-bottom: 16px;
+    padding: 16px;
+    width: 100%;
+    height: auto;
+
+    background-color: #242439;
+}
+
+.anket-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Profil */
+.profil {
+    display: flex;
+    align-items: center;
+
+    color: #fff;
+}
+
+.profil-icon {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 2614px;
+}
+
+.nick_and_info {
+    margin-left: 8px;
+}
+
+.nick {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.years {
+    font-family: sans-serif;
+}
+
+.info {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.anket-button {
+    display: flex;
+    align-items: center;
+
+    margin-top: 2px;
+}
+
+.like {
+    width: 24px;
+    height: 24px;
+
+    border: none;
+
+    background: url(newimg/like.png) center no-repeat;
+    background-size: cover;
+}
+
+.messange {
+    visibility: hidden;
+    width: 165px;
+    height: 50px;
+    padding: 15px 19px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+
+    position: fixed;
+    z-index: 100;
+    left: 50%;
+    bottom: -100px;
+    transform: translate( -50%, -50%);
+    transition: all .5s;
+
+    border-radius: 24px;
+
+    background-color: #191925;
+}
+
+.messange.open {
+    visibility: visible;
+    bottom: 65px;
+}
+
+.more {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+
+    border: none;
+
+    background: url(newimg/more.png) center no-repeat;
+    background-size: cover;
+}
+
+.more-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    visibility: hidden;
+    opacity: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba( 0, 0, 0, .7);
+    transition: all .2s;
+}
+
+.more-modal.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.more-modal-content {
+    width: 100%;
+    height: 170px;
+    padding: 24px 0;
+
+    position: fixed;
+    bottom: -150px;
+    left: 0;
+
+    border-radius: 33px 33px 0 0;
+
+    background-color: #212136;
+    transition: all .5s;
+}
+
+.more-modal-content img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.more-modal-content h1 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.modal-content-title h1 {
+    font-weight: 500;
+}
+
+.modal-content-title,
+.report,
+.block {
+    display: flex;
+    align-items: center;
+
+    padding: 0 16px;
+    margin-bottom: 16px;
+    color: #fff;
+}
+
+.modal-content-title {
+    height: 64px;
+    border-bottom: 1px #fff solid;
+    margin-bottom: 20px;
+}
+
+.more-modal.open .more-modal-content {
+    bottom: 0;
+    left: 0;
+}
+
+.about_your {
+    margin: 16px 0;
+}
+
+.text {
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+}
+
+/* Intresting + Stop-tem */
+.intresting-title,
+.stop-tem-title {
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+}
+
+/* Anket-form */
+.anket-form {
+    position: relative;
+}
+
+.anket-input {
+    width: 100%;
+    height: 50px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    padding: 18px 16px;
+    padding-right: 40px;
+
+    border: none;
+    outline: none;
+    border-radius: 10px;
+
+    background-color: #25253C;
+}
+
+
+.anket-submit {
+    position: absolute;
+    right: 16px;
+    top: 14px;
+
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: none;
+
+    background: url(newimg/submit.png) center no-repeat;
+}
+
+input:required:invalid ~ input.anket-submit {
+    background: url(newimg/submit-activ.png) center no-repeat;
+}
+
+input:required:invalid {
+    color: #ADADAD;
+    font-weight: 400;
+}
+
+.anket-input:focus {
+    border: 2px solid dodgerblue;
+}
+
+
+
+/* Navigation
+=========================================*/
+.navigation {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translate( -50%, -50%);
+
+    width: 245px;
+    height: 50px;
+
+    border-radius: 30px;
+
+    background-color: #191925;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+
+    padding: 11px 26px;
+}
+
+.rulett {
+    width: 30px;
+    height: 30px;
+    padding: 3px 0;
+    text-align: center;
+
+    background: #202DFD;
+
+    border-radius: 11px;
+    box-shadow: 0 -3px 17px rgba(32, 45, 253, .24), 0 -3px 14px rgba(32, 45, 253, .15);
+}
+
+.rulett-img {
+    width: 22px;
+}
+
+.lenta-button,
+.chats,
+.profil-button {
+    width: 24px;
+    height: 24px;
+    margin-left: 30px;
+    border: none;
+}
+
+.lenta-button {
+    background: url(newimg/lenta-button.png) center no-repeat;
+    background-size: cover;
+}
+
+.lenta-button.active {
+    background: url(newimg/lenta-button-active.png) center no-repeat;
+    background-size: cover;
+}
+
+.chats {
+    background: url(newimg/chats.png) center no-repeat;
+    background-size: cover;
+}
+
+.chats.active {
+    background: url(newimg/chats-active.png) center no-repeat;
+    background-size: cover;
+}
+
+.profil-button {
+    background: url(newimg/profil-button.png) center no-repeat;
+    background-size: cover;
+}
+
+.profil-button.active {
+    background: url(newimg/profil-button-active.png) center no-repeat;
+    background-size: cover;
+}
+
+
+
+/* Chats
+=====================================================*/
+.chats-page.closed {
+    display: none;
+}

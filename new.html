@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="newstyle.css">
+</head>
+<body>
+    <div class="lenta-page">
+        <!--Header-->
+        <div class="header">
+            <div class="page">
+                <header>
+
+                    <h1 class="header-title">Лента друзей</h1>
+
+                </header>
+            </div><!--./Page-->
+        </div><!--/.Header-->
+
+        <!--Lenta-->
+        <main class="lenta">
+            <div class="page">
+
+                <div class="anket">
+                    <div class="anket-header">
+                        <div class="profil">
+
+                            <img src="newimg/alt-img.png" alt="" class="profil-icon">
+                            <div class="nick_and_info">
+                                <h1 class="nick" id="nick">Ася,<span class="years"> 18</span></h1>
+                                <h2 class="info">Россия, Йошкар-Ола</h2>
+                            </div>
+
+                        </div>
+                        <div class="anket-button">
+
+                            <button class="like"></button>
+                            <div class="messange">
+                                <p>Лайк отправлен</p>
+                            </div>
+                            <button class="more" id="more"></button>
+
+                        </div>
+                    </div><!--./Anket-header-->
+                    <div class="about_your">
+                        <p class="text">Привет! Меня зовут Настя. Я увлечена различными областями: от программирования и технологий до искусства и путешествий. Ищу друзей, с которыми можно обсудить последние тренды в IT, поделиться вдохновляющими историями в мире искусства и вместе исследовать новые места. Буду рада найти единомышленников для интересных обсуждений и веселого времяпрепровождения! ;)</p>
+                    </div>
+                    <div class="intresting">
+                        <h1 class="intresting-title">Интересы</h1>
+                        <div class="intresting-container"></div>
+                    </div>
+                    <div class="stop-tem">
+                        <h1 class="stop-tem-title">Стоп-темы</h1>
+                        <div class="stop-tem-container"></div>
+                    </div>
+                    <div class="anket-form">
+                        <form>
+                            <input class="anket-input" type="text" required placeholder="Напишите что-нибудь" id="anket-input">
+                            <input class="anket-submit" type="submit" value="">
+                        </form>
+                    </div>
+                </div><!--./Anket-->
+
+                <div class="anket">
+                    <div class="anket-header">
+                        <div class="profil">
+
+                            <img src="newimg/alt-img.png" alt="" class="profil-icon">
+                            <div class="nick_and_info">
+                                <h1 class="nick" id="nick"><span class="years"></span></h1>
+                                <h2 class="info"></h2>
+                            </div>
+
+                        </div>
+                        <div class="anket-button">
+
+                            <button class="like"></button>
+                            <button class="more" id="more"></button>
+
+                        </div>
+                    </div><!--./Anket-header-->
+                    <div class="about_your">
+                        <p class="text"></p>
+                    </div>
+                    <div class="intresting">
+                        <h1 class="intresting-title">Интересы</h1>
+                        <div class="intresting-container"></div>
+                    </div>
+                    <div class="stop-tem">
+                        <h1 class="stop-tem-title">Стоп-темы</h1>
+                        <div class="stop-tem-container"></div>
+                    </div>
+
+                    <div class="anket-form">
+                        <form>
+                            <input class="anket-input" type="text" required placeholder="Напишите что-нибудь" id="anket-input">
+                            <input class="anket-submit" type="submit" value="">
+                        </form>
+                    </div>
+                </div><!--./Anket-->
+
+
+            </div><!--./Page-->
+        </main><!--./Lenta-->
+
+        <nav class="navigation">
+            <div class="nav-btn">
+                <buttom class="rulett">
+                    <img class="rulett-img" src="newimg/rulett.png" alt="">
+                </buttom>
+
+                <button class="lenta-button active"></button>
+                <button class="chats"></button>
+                <button class="profil-button"></button>
+
+            </div>
+        </nav>
+    </div>
+
+    <div class="more-modal" id="more-modal">
+        <div class="more-modal-content" >
+            <div class="modal-content-title">
+                <img src="newimg/modal-content-title-icon.png" alt="" class="modal-content-title-icon">
+                <h1>Действие</h1>
+            </div>
+
+            <div class="report">
+                <img src="newimg/report.png" alt="">
+                <h1>Пожаловаться на анкету</h1>
+            </div>
+            <div class="block">
+                <img src="newimg/block.png" alt="">
+                <h1>Заблокировать пользователя</h1>
+            </div>
+            <div class="close" id="close"></div>
+        </div>
+    </div>
+    <div class="chats-page closed">
+        <!--Header-->
+        <div class="header">
+            <div class="page">
+                <header>
+
+                    <h1 class="header-title">Лента друзей</h1>
+
+                </header>
+            </div><!--./Page-->
+        </div><!--/.Header-->
+
+        <!--Lenta-->
+
+        <nav class="navigation">
+            <div class="nav-btn">
+                <buttom class="rulett">
+                    <img class="rulett-img" src="newimg/rulett.png" alt="">
+                </buttom>
+
+                <button class="lenta-button "></button>
+                <button class="chats active"></button>
+                <button class="profil-button"></button>
+
+            </div>
+        </nav>
+    </div>
+    <div class="profil-page closed"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
