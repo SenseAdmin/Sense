@@ -4,7 +4,7 @@ document.addEventListener('click', function(event) {
         likeButton.classList.add('clicked');
         likeButton.disabled = true;
 
-        const messageBox = document.querySelector('.messange');
+        const messageBox = document.querySelector('.notification');
         messageBox.classList.add('open');
         setTimeout(function() {
             messageBox.classList.remove('open');
@@ -70,4 +70,28 @@ document.addEventListener('DOMContentLoaded', function() {
             chatsPage.classList.add('closed');
         });
     });
+});
+
+// Находим все элементы с классом messange
+const messages = document.querySelectorAll('.messange');
+
+// Для каждого из найденных элементов
+messages.forEach(message => {
+    if (message.classList.contains('cheked')) {
+        // Если есть класс cheked, находим конкретный div с классом chek-icon и добавляем класс chek
+        const icon = message.parentElement.querySelector('.chek-icon');
+        icon.classList.add('chek');
+    } else if (message.classList.contains('uncheked')) {
+        // Если есть класс uncheked, находим конкретный div с классом chek-icon и добавляем класс unchek
+        const icon = message.parentElement.querySelector('.chek-icon');
+        icon.classList.add('unchek');
+    }
+});
+
+messages.forEach(message => {
+    if (message.classList.contains('newmessange')) {
+        // Если есть класс cheked, находим конкретный div с классом chek-icon и добавляем класс chek
+        const icon = message.parentElement.querySelector('.chek-icon');
+        icon.classList.add('hide');
+    }
 });
