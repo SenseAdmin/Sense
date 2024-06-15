@@ -430,6 +430,16 @@ input:required:invalid {
     position: relative;
 }
 
+.chat::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 90%;
+    bottom: 0;
+    right: -8px;
+    background: #1E1E27;
+}
+
 .nick_massange_container {
     margin-left: 10px;
 }
