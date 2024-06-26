@@ -69,25 +69,11 @@ document.getElementById('fileInput').addEventListener('change', function() {
 });
 
 
-document.addEventListener('click', function(event) {
-    if (event.target.classList.contains('intrest-label')) {
-        const inputId = event.target.getAttribute('for');
-        const input = document.getElementById(inputId);
-        
-        if (input) {
-            event.target.remove(); // Remove label
-            input.remove(); // Remove input
-            // Check if input has a pseudo-element .after and remove it
-            const inputStyle = window.getComputedStyle(input, ':after');
-            if (inputStyle.content !== 'none') {
-                input.style.content = 'none';
-            }
-        }
-        
-        const labels = document.querySelectorAll('.intrest-label');
-        if (labels.length === 0) {
-            const container = document.querySelector('.cont-intrest-index');
-            container.classList.add('off');
-        }
-    }
+const intrestConts = document.querySelectorAll('.intrest-cont');
+
+// Итерируемся по каждому элементу и добавляем обработчик события для клика
+intrestConts.forEach(cont => {
+  cont.addEventListener('click', () => {
+    cont.remove(); // Удаляем элемент при клике
+  });
 });
