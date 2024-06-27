@@ -22,7 +22,7 @@ body {
     width: 100%;
     overflow-y: auto;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 16px;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -31,7 +31,6 @@ p, h1, h2, h3, h4, h5, h6 {
 
 main {
     margin-top: 80px;
-    padding-bottom: 90px !important;
     height: 100%;
 }
 
@@ -82,7 +81,7 @@ main {
 
 .lenta {
     margin-top: 82px;
-    padding-bottom: 70px;
+    padding-bottom: 95px;
 }
 
 .anket {
@@ -123,7 +122,7 @@ main {
 .nick {
     font-size: 16px;
     font-weight: 500;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
 }
 
 .years {
@@ -131,7 +130,7 @@ main {
 }
 
 .info {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
 }
 
@@ -266,7 +265,7 @@ main {
 }
 
 .text {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
     color: #fff;
 }
@@ -288,17 +287,15 @@ main {
 .anket-input {
     width: 100%;
     height: 50px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     color: #fff;
     padding: 18px 16px;
     padding-right: 40px;
-
     border: none;
     outline: none;
     border-radius: 10px;
-
-    background-color: #25253C;
+    background-color: rgb( 23, 23, 37);
 }
 
 
@@ -306,17 +303,17 @@ main {
     position: absolute;
     right: 16px;
     top: 14px;
-
     width: 24px;
     height: 24px;
     padding: 0;
     border: none;
-
     background: url(newimg/submit.png) center no-repeat;
+    background-size: cover;
 }
 
 input:required:invalid ~ input.anket-submit {
     background: url(newimg/submit-activ.png) center no-repeat;
+    background-size: cover;
 }
 
 input:required:invalid {
@@ -336,21 +333,17 @@ input:required:invalid {
     position: fixed;
     left: 50%;
     bottom: 0;
-    transform: translate( -50%, -50%);
-
-    width: 245px;
-    height: 50px;
-
+    transform: translate(-50%, -50%);
+    width: 270px;
+    height: 60px;
     border-radius: 30px;
-
     background-color: #191925;
 }
 
 .nav-btn {
     display: flex;
     align-items: center;
-
-    padding: 11px 26px;
+    padding: 15px 32px;
 }
 
 .rulett {
@@ -374,7 +367,7 @@ input:required:invalid {
 .profil-button {
     width: 24px;
     height: 24px;
-    margin-left: 30px;
+    margin-left: 35px;
     border: none;
 }
 
@@ -446,7 +439,7 @@ input:required:invalid {
 }
 
 .messange {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     color: #ADADAD;
 }
@@ -458,14 +451,21 @@ input:required:invalid {
 .date_chek_or_uncek {
     position: absolute;
     right: 0;
-    top: 13px;
+    top: 9px;
 
     display: flex;
     align-items: center;
 }
 
 .date-container {
-    margin-left: 3px;
+    margin-left: 9px;
+    margin-bottom: 1px;
+}
+
+.date {
+    font-size: 12px;
+    font-weight: 400;
+    color: #ADADAD;
 }
 
 .chek-icon {
@@ -493,16 +493,130 @@ input:required:invalid {
 
 .shiot-container {
     width: auto;
-    min-width: 18px;
-    height: 19px;
+    min-width: 20px;
+    height: 20px;
     padding: 0 6px;
     text-align: center;
 
     position: absolute;
-    top: 36px;
-    right: 11px;
+    top: 35px;
+    right: 5px;
 
     border-radius: 15px;
 
     background-color: #6349FF;
+}
+
+
+
+
+/* Perepiska
+============================================*/
+.perepiska.closed {
+    display: none;
+}
+
+.perepiska {
+    height: 100%;
+}
+
+.nick-container {
+    margin-left: 8px;
+}
+
+.nick-container .nick {
+    margin-bottom: 4px;
+}
+
+.status {
+    font-size: 12px;
+    font-weight: 500;
+    color: #202DFD;
+}
+
+.input-cont {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: -9px;
+    width: 92%;
+    max-width: 398px;
+}
+
+.napisat-file {
+    display: none;
+}
+
+.napisat-input {
+    width: 100%;
+    max-width: 398px;
+    min-height: 50px;
+    padding: 15px 80px 15px 16px;
+    font-size: 14px;
+    color: #fff;
+
+    border: none;
+    border-radius: 15px;
+
+    background-color: #191925;
+}
+
+.anket-submit.napisat-submit {
+    position: absolute;
+}
+
+.for-napisat-file {
+    background: url(newimg/Gallery.png) center no-repeat;
+    background-size: cover;
+
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    position: absolute;
+    bottom: 17px;
+    right: 45px;
+}
+
+.soobshenie-cont  {
+    height: 100%;
+    padding-bottom: 90px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    align-content: end;
+}
+
+.soobshenie {
+    width: auto;
+    max-width: 295px;
+    height: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+    padding: 16px;
+    color: #fff;
+    position: relative;
+    border-radius: 16px 16px 0 16px;
+    background-color: #745EFF;
+}
+
+
+.soobshenie p {
+    font-size: 14px;
+    font-weight: 500;
+    align-items: stretch;
+    word-wrap: break-word;
+}
+
+.soobshenie-inner {
+    flex-basis: 398px;;
+}
+
+.time {
+    position: absolute;
+    right: 6px;
+    bottom: 2px;
+
+    font-size: 12px;
 }
