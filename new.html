@@ -275,6 +275,90 @@
             </div>
         </nav>
     </div>
+
+
+
+
+    <!--Perepis
+    ==============================================-->
+    <div class="perepiska closed">
+        <!--Header-->
+        <div class="header">
+            <div class="page">
+                <header class="header-inner">
+
+                    <img class="back-btn chats" src="newimg/back-button.png" alt="">
+
+                    <img src="newimg/alt-img.png" alt="" class="profil-icon">
+
+                    <div class="nick-container">
+                        <h1 class="nick">Дима</h1>
+                        <p class="status">Online</p>
+                    </div>
+
+                </header>
+            </div><!--./Page-->
+        </div><!--/.Header-->
+
+        <main class="perepiska">
+            <div class="page">
+
+                <div class="soobshenie-cont">
+                </div>
+
+                <form class="napisat">
+
+                    <div class="input-cont">
+                        <input class="napisat-input anket-input" type="text" placeholder="Напиши что-нибудь" required id="messageInput">
+                        <label class="for-napisat-file" for="napisat-file"></label>
+                        <input class="napisat-file" type="file" id="napisat-file">
+                        <input class="anket-submit napisat-submit" type="submit" value="" id="sendMessage">
+                        <script>
+                            const sendMessageBtn = document.getElementById('sendMessage');
+                            const messageInput = document.getElementById('messageInput');
+                            const cont = document.querySelector('.soobshenie-cont');
+
+                            sendMessageBtn.addEventListener('click', function() {
+                            const messageText = messageInput.value;
+
+                            if (messageText.trim() !== '') {
+                                const newDiv = document.createElement('div');
+                                newDiv.classList.add('soobshenie');
+
+                                const newParagraph = document.createElement('p');
+                                newParagraph.textContent = messageText;
+
+                                newDiv.appendChild(newParagraph);
+
+                                const newTime = document.createElement('h3');
+                                newTime.classList.add('time');
+                                const currentTime = new Date();
+                                newTime.textContent = `${currentTime.getHours()}:${currentTime.getMinutes()}`;
+
+                                newDiv.appendChild(newTime);
+
+                                cont.appendChild(newDiv);
+
+                                const widthDiv = document.createElement('div');
+                                widthDiv.style.width = '100%';
+                                cont.appendChild(widthDiv);
+
+                                messageInput.value = '';
+                            } else {
+                                return;
+                            }
+                        });
+                        </script>
+
+                    </div>
+
+                </form>
+            </div><!--./Page-->
+        </main>
+
+    </div>
+
+
     <div class="profil-page closed"></div>
 
     <script src="script.js"></script>
