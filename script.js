@@ -42,25 +42,28 @@ document.getElementById("more-modal").addEventListener('click', event => {
 document.addEventListener('DOMContentLoaded', function() {
     const chatsBtns = document.querySelectorAll('.chats');
     const lentaButtons = document.querySelectorAll('.lenta-button');
+    const perepiska = document.querySelector('.perepiska');
+    const chatDivs = document.querySelectorAll('.chat');
     const lentaPage = document.querySelector('.lenta-page');
     const profilPage = document.querySelector('.profil-page');
     const chatsPage = document.querySelector('.chats-page');
 
-    function handleChatsClick(event) {
-        // Добавляем/удаляем классы closed у страниц в зависимости от кнопки
-        lentaPage.classList.add('closed');
-        profilPage.classList.add('closed');
-        chatsPage.classList.add('closed');
+    chatDivs.forEach(function(chatDiv) {
+        chatDiv.addEventListener('click', function(event) {
+            perepiska.classList.remove('closed');
+            lentaPage.classList.add('closed');
+            profilPage.classList.add('closed');
+            chatsPage.classList.add('closed');
+        })
+    });
 
-        if (event.target.classList.contains('chats')) {
+    chatsBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
             lentaPage.classList.add('closed');
             profilPage.classList.add('closed');
             chatsPage.classList.remove('closed');
-        }
-    }
-
-    chatsBtns.forEach(function(btn) {
-        btn.addEventListener('click', handleChatsClick);
+            perepiska.classList.add('closed');
+        });
     });
 
     lentaButtons.forEach(function(btn) {
@@ -68,9 +71,12 @@ document.addEventListener('DOMContentLoaded', function() {
             lentaPage.classList.remove('closed');
             profilPage.classList.add('closed');
             chatsPage.classList.add('closed');
+            perepiska.classList.add('closed');
         });
     });
 });
+
+
 
 // Находим все элементы с классом messange
 const messages = document.querySelectorAll('.messange');
